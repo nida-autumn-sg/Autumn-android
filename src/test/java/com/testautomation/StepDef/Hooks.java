@@ -27,7 +27,7 @@ public void LaunchApp() {
 	   caps.setCapability("udid", "RR8MB0F87QD");
 	   caps.setCapability("platformName", "Android");
 	   caps.setCapability("platformVersion", "9");
-	   caps.setCapability("appPackage", "com.autumn");
+	   caps.setCapability("appPackage", "sg.autumn.tech.qa");
 	   caps.setCapability("appActivity", "com.autumn.MainActivity");
 	   caps.setCapability("BROWSER_NAME", "Chrome");
 	   caps.setCapability("chromeDriverExecutable", "C:/Users/Nida/Downloads/NewChromeDriver/chromedriver_win32");
@@ -43,6 +43,7 @@ public void LaunchApp() {
 			}
 		
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		
 		
 	
 }
