@@ -204,7 +204,7 @@ public void user_enters_the_savings_and_liabilities_and_clicks_on_next(String st
 
 @Then("user selects finance option from the below navigation bar")
 public void user_selects_finance_option_from_the_below_navigation_bar() throws InterruptedException {
-	Thread.sleep(2000);
+	Thread.sleep(1000);
    driver.findElement(By.xpath("//android.widget.TextView[@content-desc=\"txt_finance\"]")).click();
 }
 
@@ -258,8 +258,8 @@ public void user_provides_the_username_and_pwd(String string, String string2) {
 @Then("user selects the bank option from the Quicklinks")
 public void user_selects_the_bank_option_from_the_Quicklinks() {
 	
-	WebDriverWait wait = new WebDriverWait(driver, 30);
-	wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//android.view.ViewGroup[@content-desc=\"btn_bank\"]")));
+	//WebDriverWait wait = new WebDriverWait(driver, 30);
+	//wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//android.view.ViewGroup[@content-desc=\"btn_bank\"]")));
 	
 	driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"btn_bank\"]")).click();
 
@@ -440,16 +440,17 @@ public void user_provides_the_estimated_property_value(String string) {
 }
 
 
-@Then("user edits the PropertyName {string} and postalCode {string} ")
-public void user_edits_the_PropertyName_and_postalCode_and_value(String string, String string2) {
+@Then("user edits the PropertyName {string} and postalCode {string}")
+public void user_edits_the_PropertyName_and_postalCode(String string, String string2) {
+	driver.findElement(By.xpath("//android.widget.EditText[@content-desc=\"input_property_name\"]")).click();;
 	driver.findElement(By.xpath("//android.widget.EditText[@content-desc=\"input_property_name\"]")).clear();
 	driver.findElement(By.xpath("//android.widget.EditText[@content-desc=\"input_property_name\"]")).sendKeys(string);
 	
+	driver.findElement(By.xpath("//android.widget.EditText[@content-desc=\"input_postal_code\"]")).click();
 	driver.findElement(By.xpath("//android.widget.EditText[@content-desc=\"input_postal_code\"]")).clear();
 	driver.findElement(By.xpath("//android.widget.EditText[@content-desc=\"input_postal_code\"]")).sendKeys(string2);
 	
 	//driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"SGD 2,000,000\"))");
-
 
 	
 
@@ -474,9 +475,10 @@ public void user_edits_the_PropertyName_and_postalCode_and_value(String string, 
 
 
 @Then("clicks on manage button under savings and liabilties")
-public void clicks_on_manage_button_under_savings_and_liabilties() {
-	
+public void clicks_on_manage_button_under_savings_and_liabilties() throws Exception {
+	Thread.sleep(1000);
 	driver.findElement(By.xpath("//android.widget.Button[@content-desc=\"btn_managesavings_&_loans\"]")).click();
+
    
 }
 
@@ -549,11 +551,14 @@ public void clicks_on_manage_button_under_CPF_details() {
 	action.press(PointOption.point(startX, startY)).waitAction()
 	.moveTo(PointOption.point(endX,endY)).release().perform();*/
 	
-	driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"btn_managecpf_savings\"))").click();
+	//driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"btn_managecpf_savings\"))").click();
 	
 	
 	
-driver.findElement(By.xpath("//android.widget.Button[@content-desc=\"btn_managecpf_savings\"]")).click();
+//driver.findElement(By.xpath("//android.widget.Button[@content-desc=\"btn_managecpf_savings\"]")).click();
+
+//driver.findElementByAccessibilityId("btn_managecpf_savings").click();
+	driver.findElementById("btn_managecpf_savings").click();
    
 }
 
@@ -663,8 +668,12 @@ public void user_provides_equity_name_and_Date_of_intial_purchase_and_Broker_and
 	driver.findElement(By.xpath("//android.widget.EditText[@content-desc=\"input_ticker\"]")).click();
 	driver.findElement(By.xpath("//android.widget.EditText[@content-desc=\"input_ticker\"]")).sendKeys(string4);
 	
-	driver.findElement(By.xpath("//android.widget.EditText[@content-desc=\"input_initial_purchase_price\"]")).click();
-	driver.findElement(By.xpath("//android.widget.EditText[@content-desc=\"input_initial_purchase_price\"]")).sendKeys(string5);
+	//driver.findElement(By.xpath("//android.widget.EditText[@content-desc=\"input_initial_purchase_price\"]")).click();
+	//driver.findElement(By.xpath("//android.widget.EditText[@content-desc=\"input_initial_purchase_price\"]")).sendKeys(string5);
+	//driver.findElementByAccessibilityId("input_initial_purchase_price").click();
+	//driver.findElementByAccessibilityId("input_initial_purchase_price").sendKeys(string5);
+	
+	driver.findElementByXPath("//android.widget.EditText[@content-desc=\"input_initial_purchase_price\"]").click();
 	
 	
 	driver.findElement(By.xpath("//android.widget.EditText[@content-desc=\"input_no._of_holdings\"]")).click();

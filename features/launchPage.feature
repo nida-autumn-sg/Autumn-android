@@ -111,66 +111,66 @@ Examples:
 
 
 
-Scenario Outline:To add the savings and liabilities 
-Given user launches the Autumn Application
-Then user clicks on login button
-Then user provides the username "<uname>" and pwd "<password>"
-Then user clicks on login button
-Then user selects the bank option from the Quicklinks
-Then user selects the product from AddProduct dropdown
-Then user gives the account name "<AccountName>"
-Then user chooses the bank "<bank>" from the dropdown
-And user provides the amount "<Amount>" present in the account
-And user click on save and selects the fab button
-Then user selects the home loan option
-Then user provides the loan name "<LoanName>"
-Then user chooses the bank "<bank1>" from the dropdown
-And user provides the amount "<Amount1>" present in the account
-And user clicks on save and then on cross button
-Then logsout of the app
+#Scenario Outline:To add the savings and liabilities 
+#Given user launches the Autumn Application
+#Then user clicks on login button
+#Then user provides the username "<uname>" and pwd "<password>"
+#Then user clicks on login button
+#Then user selects the bank option from the Quicklinks
+#Then user selects the product from AddProduct dropdown
+#Then user gives the account name "<AccountName>"
+#Then user chooses the bank "<bank>" from the dropdown
+#And user provides the amount "<Amount>" present in the account
+#And user click on save and selects the fab button
+#Then user selects the home loan option
+#Then user provides the loan name "<LoanName>"
+#Then user chooses the bank "<bank1>" from the dropdown
+#And user provides the amount "<Amount1>" present in the account
+#And user clicks on save and then on cross button
+#Then logsout of the app
 
-Examples:
+#Examples:
 
-|uname            |password   |AccountName|bank		|Amount   |LoanName |bank1|Amount1|
-|nida16@gmail.com |Madic@12345| nida	  |Maybank  |300      |Home Loan|UOB  |200    |
-
-
-Scenario Outline:To add the CPF details 
-Given user launches the Autumn Application
-Then user clicks on login button
-Then user provides the username "<uname>" and pwd "<password>"
-Then user clicks on login button
-Then user selects the CPF option from the Quicklinks
-Then user enters the monthly contribution "<MonthlyContribution>"
-Then user provides the value of ordinary account "<OrdinaryAccount>"
-Then user provides the value of special account "<SpecialAccount>"
-Then user provides the value of Medisave account "<MedisaveAccount>"
-And user clicks on save and then on cross button
-Then logsout of the app
-
-Examples:
-
-|uname           |password   |MonthlyContribution  |OrdinaryAccount	|SpecialAccount  |MedisaveAccount |
-|nida16@gmail.com |Madic@12345| 1200              |2000			    |3200	         |850	 |
+#|uname            |password   |AccountName|bank		|Amount   |LoanName |bank1|Amount1|
+#|nida@autumn.sg   |Madic!12345| nida	  |Maybank  |300      |Home Loan|UOB  |200    |
 
 
+#Scenario Outline:To add the CPF details 
+#Given user launches the Autumn Application
+#Then user clicks on login button
+#Then user provides the username "<uname>" and pwd "<password>"
+#Then user clicks on login button
+#Then user selects the CPF option from the Quicklinks
+#Then user enters the monthly contribution "<MonthlyContribution>"
+#Then user provides the value of ordinary account "<OrdinaryAccount>"
+#Then user provides the value of special account "<SpecialAccount>"
+#Then user provides the value of Medisave account "<MedisaveAccount>"
+#And user clicks on save and then on cross button
+#Then logsout of the app
 
-Scenario Outline:To add the property details 
-Given user launches the Autumn Application
-Then user clicks on login button
-Then user provides the username "<uname>" and pwd "<password>"
-Then user clicks on login button
-Then user selects the properties option from the Quicklinks
-Then user provides the property name "<PropertyName>" 
-Then user provides the postal code "<PostalCode>"
-Then user provides the estimated property value "<EstimatedValue>" 
-And user clicks on save and then on cross button
-Then logsout of the app
+#Examples:
 
-Examples:
+#|uname           |password   |MonthlyContribution  |OrdinaryAccount	|SpecialAccount  |MedisaveAccount |
+#|nida@autumn.sg  |Madic!12345| 1200              |2000			    |3200	         |850	 |
 
-|uname           |password   |PropertyName  |PostalCode  |EstimatedValue  |
-|nida16@gmail.com |Madic@12345|condo         |640009      |2000000        |
+
+
+#Scenario Outline:To add the property details 
+#Given user launches the Autumn Application
+#Then user clicks on login button
+#Then user provides the username "<uname>" and pwd "<password>"
+#Then user clicks on login button
+#Then user selects the properties option from the Quicklinks
+#Then user provides the property name "<PropertyName>" 
+#Then user provides the postal code "<PostalCode>"
+#Then user provides the estimated property value "<EstimatedValue>" 
+#And user clicks on save and then on cross button
+#Then logsout of the app
+
+#Examples:
+
+#|uname           |password   |PropertyName  |PostalCode  |EstimatedValue  |
+#|nida@autumn.sg  |Madic!12345|condo         |640009      |2000000        |
 
 
 
@@ -196,7 +196,7 @@ Examples:
 #Examples:
 
 #|uname             |password   |name    |Date   |Broker |Ticker |PurchasePrice|holdings|
-#|dumm19@gmail.com  |Madic@12345|equity1 |06/2020|broker1|ticker1|200          |2       |
+#|nida@autumn.sg  |Madic!12345|equity1 |06/2020|broker1|ticker1|200          |2       |
 
 
 
@@ -208,21 +208,21 @@ Examples:
 
 
 
-Scenario Outline:To edit the savings and liabilities 
-Given user launches the Autumn Application
-Then user clicks on login button
-Then user provides the username "<uname>" and pwd "<password>"
-Then user clicks on login button
-Then user selects finance option from the below navigation bar
-And clicks on manage button under savings and liabilties
-Then user selects the edit button and changes the amount"<amount>"
-And user clicks on done and then on cross button
-Then logsout of the app
+#Scenario Outline:To edit the savings and liabilities 
+#Given user launches the Autumn Application
+#Then user clicks on login button
+#Then user provides the username "<uname>" and pwd "<password>"
+#Then user clicks on login button
+#Then user selects finance option from the below navigation bar
+#And clicks on manage button under savings and liabilties
+#Then user selects the edit button and changes the amount"<amount>"
+#And user clicks on done and then on cross button
+#Then logsout of the app
 
 
-Examples:
-|uname              |password   |amount|
-|nida16@gmail.com  |Madic@12345|2000  |
+#Examples:
+#|uname              |password   |amount|
+#|nida@autumn.sg     |Madic!12345|2000  |
 
 #Scenario Outline:To edit the property details 
 #Given user launches the Autumn Application
@@ -239,10 +239,10 @@ Examples:
 #Examples:
 
 #|uname            |password   |PropertyName| PostalCode| EstimatedValue|
-#|nida15@gmail.com |Madic@12345|HDB         |640712	   | 10000|
+#|nida@autumn.sg  |Madic!12345 |HDB         |640712	   | 10000|
 
 
-#Scenario Outline:To edit the CPF details 
+#Scenario Outline:To edit the CPF details--not working 
 #Given user launches the Autumn Application
 #Then user clicks on login button
 #Then user provides the username "<uname>" and pwd "<password>"
@@ -257,24 +257,24 @@ Examples:
 #Examples:
 
 #|uname           |password   |monthly |ordinary	|special |medisave |
-#|nida@autumn.sg  |Madic!12345|200     |300		|400	 |500	   |
+#|dumm19@gmail.com  |Madic@12345|200     |300		|400	 |500	   |
 
 
-Scenario Outline:To change the password of the user
-Given user launches the Autumn Application
-Then user clicks on login button
-Then user provides the username "<uname>" and pwd "<Currentpassword>"
-Then user clicks on login button
-Then user selects the change pwd option under settings
-And user provides the currentpwd "<Currentpassword>" and newpwd "<NewPassword>" and repeatpwd "<RepeatPassword>"
-Then user clicks on submit button and logsout
-And user logins with username "<uname>" and newpwd "<NewPassword>"
-Then logsout of the app
+#Scenario Outline:To change the password of the user
+#Given user launches the Autumn Application
+#Then user clicks on login button
+#Then user provides the username "<uname>" and pwd "<Currentpassword>"
+#Then user clicks on login button
+#Then user selects the change pwd option under settings
+#And user provides the currentpwd "<Currentpassword>" and newpwd "<NewPassword>" and repeatpwd "<RepeatPassword>"
+#Then user clicks on submit button and logsout
+#And user logins with username "<uname>" and newpwd "<NewPassword>"
+#Then logsout of the app
 
-Examples:
+#Examples:
 
-|uname           |Currentpassword   |NewPassword   |RepeatPassword    |
-|nida16@gmail.com|Madic@12345       |Madic!12345   |Madic!12345       |
+#|uname           |Currentpassword   |NewPassword   |RepeatPassword    |
+#|nida@autumn.sg  |Madic@12345       |Madic!12345   |Madic!12345       |
 
 
 #Scenario Outline:To change the account details of the user
@@ -289,8 +289,8 @@ Examples:
 
 #Examples:
 
-#|uname           |password     | name   |
-#|gum@gmail.com   |Madic!12345  |gunTree456 |
+#|uname           |password     | name      |
+#|nida@autumn.sg  |Madic!12345  |gunTree456 |
 
 
 

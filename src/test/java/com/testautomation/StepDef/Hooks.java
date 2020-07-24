@@ -3,14 +3,8 @@ package com.testautomation.StepDef;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
-
-
 import org.openqa.selenium.remote.DesiredCapabilities;
-
-
 import com.testautomation.Listeners.BaseUtil;
-
-
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import io.appium.java_client.android.AndroidDriver;
